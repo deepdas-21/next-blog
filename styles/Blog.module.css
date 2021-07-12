@@ -1,0 +1,18 @@
+.container {
+  margin: 5%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  margin-top: 5%;
+}
+
+.content > h4 {
+  font-size: larger;
+  margin: 20px 0;
+}
+
+.content > p {
+  margin: 20px 0;
+}
