@@ -1,0 +1,20 @@
+.skeleton {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.skeleton > div {
+  background: lightgray;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+.s_banner {
+  padding: 12% 0;
+}
+.s_header {
+  padding: 15px 0;
+  max-width: 500px;
+}
+.s_content {
+  padding: 8px 0;
+  max-width: 1000px;
+}

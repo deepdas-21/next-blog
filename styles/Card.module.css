@@ -1,6 +1,7 @@
 .container {
   margin: 3% 0;
   background-color: white;
+  height: max-content;
 }
 
 .content {

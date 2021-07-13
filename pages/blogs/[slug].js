@@ -2,6 +2,7 @@ import { createClient } from 'contentful'
 import Image from 'next/image'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import styles from '../../styles/Blog.module.css'
+import Skeleton from '../../comps/skeleton'
 
 const client = createClient({
     space: process.env.SPACE_ID,
@@ -19,7 +20,7 @@ export const getStaticPaths = async () => {
     
     return {
         paths,
-        fallback: false
+        fallback: true
     }
 }
 
@@ -28,16 +29,29 @@ export const getStaticProps = async ({ params }) => {
         content_type: 'blogs',
         'fields.slug': params.slug
     })
+
+    if (!items.length) {
+        return {
+            redirect: {
+                destination: '/',
+                permenent: false
+            }
+        }
+    }
+
     return {
         props: {
-            blog: items[0]
-        }
+            blog: items[0],
+        },
+        revalidate: 10
     }
 }
 
 function BlogDetails({ blog }) {
+
+    if(!blog) return <Skeleton />
+
     const { featuredImage, title, description } = blog.fields;
-    console.log(blog);
     return (
         <div className={styles.container }>
             <Image
