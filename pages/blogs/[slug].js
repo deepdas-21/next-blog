@@ -2,7 +2,7 @@ import { createClient } from 'contentful'
 import Image from 'next/image'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import styles from '../../styles/Blog.module.css'
-import Skeleton from '../../comps/skeleton'
+import Skeleton from '../../comps/Skeleton'
 
 const client = createClient({
     space: process.env.SPACE_ID,
