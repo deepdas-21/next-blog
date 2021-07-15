@@ -55,7 +55,7 @@ function BlogDetails({ blog }) {
     return (
         <div className={styles.container }>
             <Image
-                src={`https://${featuredImage.fields.file.url}`}
+                src={`https:${featuredImage.fields.file.url}`}
                 alt=""
                 width={featuredImage.fields.file.details.image.width}
                 height={featuredImage.fields.file.details.image.height}
