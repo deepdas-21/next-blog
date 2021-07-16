@@ -6,10 +6,26 @@
 .nav_links {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 15px;
 }
 
-.nav_links > *:hover {
+.nav_links > a:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: 2px solid #166ae8;
+  border-radius: 30px;
+  color: #166ae8;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  color: white;
+  background: #166ae8;
 }

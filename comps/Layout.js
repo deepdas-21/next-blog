@@ -1,11 +1,14 @@
 import Header from './Header'
+import { AuthContextProvider } from '../stores/authContext'
 
 function Layout({ children }) {
     return (
-        <div className="container">
-            <Header />
-            {children}
-        </div>
+        <AuthContextProvider>
+            <div className="container">
+                <Header />
+                {children}
+            </div>
+        </AuthContextProvider>
     )
 }
 
