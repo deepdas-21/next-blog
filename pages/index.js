@@ -16,7 +16,7 @@ export default function Home() {
     <div className={ styles.container }>
       <Image src={banner} alt="banner" />
       <div className={ styles.content }>
-        <h2>{ heading }</h2><br />
+        <br /><h2>{ heading }</h2><br />
         {paragraphs.map((paragraph, i) => (
           <p key={i}>{ paragraph }</p>
         ))}

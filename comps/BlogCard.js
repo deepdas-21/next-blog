@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Card.module.css'
 
 function BlogCard({ blog }) {
-    const { title, slug, thumbnail} = blog.fields
+    const { title, slug, thumbnail } = blog.fields
     return (
         
             <div className={ styles.container }>

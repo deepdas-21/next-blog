@@ -2,6 +2,8 @@
   margin: 3% 0;
   background-color: white;
   height: max-content;
+  display: flex;
+  justify-content: center;
 }
 
 .content {
@@ -17,12 +19,18 @@
 .content > a {
   display: flex;
   justify-content: center;
-  width: 35%;
+  width: 32%;
   margin-right: auto;
   margin-left: auto;
-  font-size: small;
+  font-size: 13px;
   cursor: pointer;
   background-color: transparent;
   padding: 8px;
   border: 1px solid orange;
+  border-radius: 5px;
+}
+
+.content > a:hover {
+  background-color: orange;
+  color: white;
 }
